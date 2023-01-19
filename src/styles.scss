@@ -1,0 +1,233 @@
+/* You can add global styles to this file, and also import other style files */
+@Import Url('Https://Fonts.Googleapis.Com/Css2?Family=Roboto:wght@300;400;700&Display=Swap');
+
+* {
+  Margin: 0;
+  Padding: 0;
+  Box-Sizing: Border-Box;
+}
+
+Body {
+  Font-Family: 'Roboto', Sans-Serif;
+}
+
+/* Header */
+
+.Material-Icons {
+  Color: Rgb(96, 96, 96);
+}
+
+.Header {
+  Display: Flex;
+  Justify-Content: Space-Between;
+  Align-Items: Center;
+  Height: 70px;
+  Padding: 15px;
+}
+
+.Header__left {
+  Display: Flex;
+  Align-Items: Center;
+}
+
+.Header__left Img {
+  Width: 100px;
+  Margin-Left: 15px;
+}
+
+.Header I {
+  Padding: 0 7px;
+  Cursor: Pointer;
+}
+
+.Header__search Form {
+//   Border: 2px Solid #Ddd;
+  Height: 35px;
+  Margin: 0;
+  Padding: 0;
+  Display: Flex;
+//   border-radius: 17px;
+}
+
+.Header__search Input {
+  Width: 500px;
+  Padding: 10px;
+  Margin: 0;
+  border-radius: 17px 1px 0px 17px;
+  border: 1px solid #a8a8a8;
+  Height: 100%;
+}
+
+.Header__search Button {
+  Padding: 0px 15px 0 15px;
+  Margin: 0;
+  Height: 100%;
+  border:  1px solid #a8a8a8;
+    Border-Radius: 0 17px 17px 0px;
+}
+
+/* Sidebar */
+.MainBody {
+  Height: Calc(100vh - 70px);
+  Display: Flex;
+  Overflow: Hidden;
+}
+
+.Sidebar {
+  Height: 100%;
+  Width: 230px;
+  Background-Color: White;
+  Overflow-Y: Scroll;
+}
+
+.Sidebar__categories {
+  Width: 100%;
+  Display: Flex;
+  Flex-Direction: Column;
+  Margin-Bottom: 15px;
+  Margin-Top: 15px;
+}
+
+.Sidebar__category {
+  Display: Flex;
+  Align-Items: Center;
+  Padding: 12px 25px;
+}
+
+.Sidebar__category Span {
+  Margin-Left: 15px;
+}
+
+.Sidebar__category:hover {
+  Background: #E5e5e5;
+  Cursor: Pointer;
+}
+
+.Sidebar::-Webkit-Scrollbar {
+  Display: None;
+}
+
+Hr {
+  Height: 1px;
+  Background-Color: #E5e5e5;
+  Border: None;
+}
+
+/* Videos */
+
+.Videos {
+  Background-Color: #F9f9f9;
+  Width: 100%;
+  Height: 100%;
+  Padding: 15px 15px;
+  Border-Top: 1px Solid #Ddd;
+  Overflow-Y: Scroll;
+}
+
+.Videos__container {
+    Display: Flex;
+    Flex-Direction: Row;
+    Justify-Content: Space-Around;
+    Flex-Wrap: Wrap;
+}
+
+.Video {
+    Width: 310px;
+    cursor: pointer;
+
+  Margin-Bottom: 30px;
+}
+
+.Video__thumbnail {
+  Width: 100%;
+  Height: 170px;
+}
+
+.Video__thumbnail Img {
+  Object-Fit: Cover;
+  Height: 100%;
+  Width: 100%;
+}
+
+.Author Img {
+  Object-Fit: Cover;
+  Border-Radius: 50%;
+  Height: 40px;
+  Width: 40px;
+  Margin-Right: 10px;
+}
+
+.Video__details {
+  Display: Flex;
+  Margin-Top: 10px;
+}
+
+.Title {
+  Display: Flex;
+  Flex-Direction: Column;
+}
+
+.Title H3 {
+  Color: Rgb(3, 3, 3);
+  Line-Height: 18px;
+  Font-Size: 14px;
+  Margin-Bottom: 6px;
+}
+
+.Title A,
+Span {
+  Text-Decoration: None;
+  Color: Rgb(96, 96, 96);
+  Font-Size: 14px;
+}
+
+H1 {
+  Font-Size: 20px;
+  Margin-Bottom: 10px;
+  Color: Rgb(3, 3, 3);
+}
+
+@Media (Max-Width: 425px) {
+   
+  .Header__search {
+    Display: None;
+  }
+
+  .Header__icons .Material-Icons {
+    Display: None;
+  }
+
+  .Header__icons .Display-This {
+    Display: Inline;
+  }
+
+  .Sidebar {
+    Display: None;
+  }
+}
+
+@Media (Max-Width: 768px) {
+    .categories{
+        Display: None;
+    }
+  .Header__search {
+    Display: None;
+  }
+
+  .Sidebar {
+    Display: None;
+  }
+
+  .Show-Sidebar {
+    Display: Inline;
+    Position: Fixed;
+    Top: 4.4rem;
+    Height: Auto;
+  }
+}
+
+@Media (Max-Width: 941px) {
+  .Header__search Input {
+    Width: 300px;
+  }
+}

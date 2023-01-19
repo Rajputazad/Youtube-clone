@@ -1,0 +1,36 @@
+#flexshorts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 100%;
+}
+iframe{
+    height: 534px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 9px;
+}
+#flexitem{
+    height: 534px;
+    display: flex;
+    justify-content: center;
+}
+#i{
+    transform: rotate(-90deg);
+padding-left: 20px;
+}
+i{
+    font-size: 23px;
+    cursor: pointer;
+}
+#iconflex{
+    padding-left:10px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+}
