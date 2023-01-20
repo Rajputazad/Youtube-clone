@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@Import Url('Https://Fonts.Googleapis.Com/Css2?Family=Roboto:wght@300;400;700&Display=Swap');
-
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+// @import "Https://Fonts.Googleapis.Com/Css2?Family=Roboto:wght@300;400;700&Display=Swap";
 * {
   Margin: 0;
   Padding: 0;
@@ -231,3 +231,5 @@ H1 {
     Width: 300px;
   }
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

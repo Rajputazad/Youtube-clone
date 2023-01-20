@@ -3,10 +3,10 @@
 
     <Div Class="Videos__container">
       <!-- Single Video Starts -->
-      <Div  routerLink="/main/watch" Class="Video">
-        <Div (mouseover)="click()" Class="Video__thumbnail">
-          <Img *ngIf="show==true" Src="https://i.ytimg.com/an_webp/vzk5DCFJr8c/mqdefault_6s.webp?du=3000&sqp=CKiKpJ4G&rs=AOn4CLAynnUt3cN54qS_k7BZm_mIxCClXA" Alt="" />
-          <Img *ngIf="show==false" Src="https://img.youtube.com/vi/vzk5DCFJr8c/maxresdefault.jpg" Alt="" />
+      <!-- <Div  routerLink="/main/watch" Class="Video">
+        <Div Class="Video__thumbnail">
+           <Img *ngIf="show==true" Src="https://i.ytimg.com/an_webp/vzk5DCFJr8c/mqdefault_6s.webp?du=3000&sqp=CKiKpJ4G&rs=AOn4CLAynnUt3cN54qS_k7BZm_mIxCClXA" Alt="" /> -->
+          <!-- <Img  Src="https://img.youtube.com/vi/vzk5DCFJr8c/maxresdefault.jpg" Alt="" />
         </Div>
         <Div Class="Video__details">
           <Div Class="Author">
@@ -15,32 +15,32 @@
           <Div Class="Title">
             <H3>Top 5 Programming Languages 2023 | Which Programming Language to Learn in 2023? | Simplilearn
             </H3>
-            <A Href="">FutureCoders</A>
+            <A >FutureCoders</A>
             <Span>10M Views • 3 Months Ago</Span>
           </Div>
-        </Div>
-      </Div>
-      <!-- Single Video Ends -->
-
+         </Div>
+      </Div> 
+      Single Video Ends -->
+      <ng-container *ngFor="let youtube of data" >
       <!-- Single Video Starts -->
-      <Div routerLink="/main/watch" Class="Video">
+      <Div (click)="play(youtube._id)" Class="Video">
         <Div Class="Video__thumbnail">
-          <Img Src="Https://Img.Youtube.Com/Vi/YpTmcCBBdTE/Maxresdefault.Jpg" Alt="" />
+          <img src="{{youtube.Thumbnail}}" alt="">
         </Div>
         <Div Class="Video__details">
           <Div Class="Author">
-            <Img Src="Http://Aninex.Com/Images/Srvc/Web_de_icon.Png" Alt="" />
+            <img src="{{youtube.ChannelImageUrl}}" alt="">
           </Div>
           <Div Class="Title">
-            <H3>Build A Password Generator With React JS - Beginners Tutorial</H3>
-            <A Href="">FutureCoders</A>
-            <Span>10M Views • 3 Months Ago</Span>
+            <H3>{{youtube.VideoTitle}}</H3>
+            <A >{{youtube.ChannelName}}</A>
+            <Span>{{youtube.Views}} Views • 3 Months Ago</Span>
           </Div>
         </Div>
       </Div>
       <!-- Single Video Ends -->
-
-      <Div Class="Video">
+      </ng-container>
+      <!-- <Div Class="Video">
         <Div Class="Video__thumbnail">
           <Img Src="Https://Img.Youtube.Com/Vi/46cXFUzR9XM/Maxresdefault.Jpg" Alt="" />
         </Div>
@@ -448,6 +448,6 @@
             <Span>36K Views • 1 Day Ago</Span>
           </Div>
         </Div>
-      </Div>
+      </Div> -->
     </Div>
   </Div>

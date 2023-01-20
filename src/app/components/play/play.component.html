@@ -2,23 +2,45 @@
     <div class="left"></div>
     <main>
         <div class="main__video">
-            <div class="main__video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Tck7MFXRQZg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <div *ngIf="video==true" class="main__video-container">
+                <!-- <video *ngIf="video==true" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true">
+                    <source [src]='VideoUrl'  type="video/mp4">
+                </video> -->
+<iframe  width="560" height="315" [src]='VideoUrl|safe'  allowfullscreen></iframe>
             </div>
             <div class="main__description">
-                <p>Top 10 Programming Languages You Must Learn in 2022</p>
-                <p>290,399 views</p>
-                <a href="#">
+                <h2>{{data.VideoTitle}}</h2>
+                <div id="flex">
+                    <p>{{data.Views}} views</p>
+                    <div >
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        {{data.Likes}}
+                        <i class="fa fa-thumbs-down"></i>
+                        {{data.Dislikes}}
+                        <i class="fa fa-share"></i>
+                        Share
+                        <i id="i" class="fa fa-ellipsis-v"></i>
+                    </div>
+
+                </div>
+                <!-- <a >
                     <img src="../../../assets/img/describe-icons.jpg" alt="describe-icons" >
-                </a>
+                </a> -->
             </div>
             <div class="main__sub-description">
-                <a href="#">
-                    <img class="main__name" src="../../../assets/img/describe-name.jpg" alt="name">
-                </a>
-                <a href="#">
+                <div id="sub">
+                    <div>
+                        <img id="img2" class="main__name"  src="{{data.ChannelImageUrl}}" alt="">
+                         <p id="p" ><b>{{data.ChannelName}}</b> </p>  
+
+                    </div>
+                        {{data.Subscribers}}
+                </div><br>
+                    <!-- <img class="main__name" src="../../../assets/img/describe-name.jpg" alt="name"> -->
+                <!-- <a href="#">
                     <img class="main__subscriptions" src="../../../assets/img/subscribed.jpg" alt="subscriptions">
-                </a>
+                </a> -->
                 <p>Stephen A. Smith gives his best sales pitch for Kevin Durant to sign with the New York Knicks ahead of 2019 NBA free agency, saying KD would get whatever he desired courtesy of James Dolan..</p>
             </div>
             <div class="main__more">
