@@ -244,6 +244,13 @@ section {
 
 .main__subscriptions {
   float: right;
+  width: 224px;
+  height: 135px;
+  margin-bottom: 30px;
+  display: re;
+  position: relative;
+  top: -45px;
+  cursor: pointer;
 }
 
 .main__sub-description p {
@@ -399,5 +406,13 @@ i {
 	height: 40px;
 }
 #p{
-
+  // margin-top: 10px;
+}
+#user:hover{
+  cursor: pointer;
+  background-color: rgb(185, 182, 182);
+  border-radius: 18px 9px 9px 17px;
+}
+#sus{
+  font-size: smaller;
 }

@@ -36,9 +36,8 @@ export class PlayComponent {
         this.VideoUrl = this.data.VideoUrl
         this.ChannelName = this.data.ChannelName
         this.video = true
-        console.log(this.VideoUrl);
       } else {
-        alert(res.message)
+        this.router.navigate(["main/Video_unavailable"])
       }
     })
   }

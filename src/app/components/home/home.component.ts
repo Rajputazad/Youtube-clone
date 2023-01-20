@@ -23,7 +23,7 @@ export class HomeComponent {
         // console.log(this.data);
         
       }else{
-        alert(res.message)
+      this.router.navigate(["main/fgefy"])
       }
     })
   }

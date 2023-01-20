@@ -21,6 +21,7 @@ import {VgControlsModule} from '@videogular/ngx-videogular/controls';
 import {VgOverlayPlayModule} from '@videogular/ngx-videogular/overlay-play';
 import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';
 import { SafePipe } from './safe.pipe';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SafePipe } from './safe.pipe';
     ShortsComponent,
     SubscriptionsComponent,
     PlayComponent,
-    SafePipe
+    SafePipe,
+    PagenotfoundComponent
   ],
   imports: [
     LoadingBarModule,
