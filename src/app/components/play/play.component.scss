@@ -326,6 +326,7 @@ aside {
 
 .aside__video {
   padding-bottom: 0.3em;
+  width: 150px;
 }
 
 .aside__more {
@@ -405,8 +406,13 @@ i {
 	justify-content: space-between;
 	height: 40px;
 }
-#p{
+#div{
   // margin-top: 10px;
+  width: 100%;
+height: 91px;
+display: flex;
+cursor: pointer;
+margin-bottom: 5px;
 }
 #user:hover{
   cursor: pointer;

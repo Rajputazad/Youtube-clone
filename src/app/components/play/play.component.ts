@@ -15,18 +15,14 @@ export class PlayComponent {
     var id: any = this.route.snapshot.queryParams;
     this.id = id.id
     // console.log(id.id);
-
+this.All()
     this.Userdata()
   }
   id: any
   data: any = []
   VideoUrl: any;
-  likes: any
-  dislike: any
-  VideoTitle: any
-  Subscribers: any
   ChannelName: any
-  ChannelImageUrl: any
+  
   video = false
   Views: any
   Userdata() {
@@ -41,7 +37,26 @@ export class PlayComponent {
       }
     })
   }
+alldata:any=[]
 
+All(){
+  this.videoapi.getVedios().subscribe((res: any) => {
+    if (res.success == true) {
+      this.alldata = res.data
+      // console.log(this.data);
+      
+    }else{
+    this.router.navigate(["main/fgefy"])
+    }
+  })
+}
 
+async play(id:any){
+  await this.videoapi.Id(id)
 
+  this.router.navigate(["main/home"])
+  setTimeout(() => {
+	this.router.navigateByUrl("main/watch?id="+id)
+}, 1);
+}
 }

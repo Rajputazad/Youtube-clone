@@ -54,45 +54,13 @@
                 <p>Up next</p>
                 <a >AUTOPLAY</a>
             </div>
-            <a  class="first-img-aside">
-                <img src="../../../assets/img/aside-pic.jpg" alt="Next video">
-            </a>
-            <a  >
-                <img  class="aside__video" src="../../../assets/img/aside-pic.jpg" alt="Next video">
-            </a>
-            <a  >
-                <img  class="aside__video" src="../../../assets/img/aside-pic.jpg" alt="Next video">
-            </a>
-            <a  >
-                <img  class="aside__video" src="../../../assets/img/aside-pic.jpg" alt="Next video">
-            </a>
-            <a  >
-                <img  class="aside__video" src="../../../assets/img/aside-pic.jpg" alt="Next video">
-            </a>
-             <a  >
-                <img  class="aside__video" src="../../../assets/img/aside-pic.jpg" alt="Next video">
-            </a>
-            <a  >
-                <img  class="aside__video" src="../../../assets/img/aside-pic.jpg" alt="Next video">
-            </a>
-            <a  >
-                <img  class="aside__video" src="../../../assets/img/aside-pic.jpg" alt="Next video">
-            </a>
-            <a  >
-                <img  class="aside__video" src="../../../assets/img/aside-pic.jpg" alt="Next video">
-            </a>
-            <a  >
-                <img  class="aside__video" src="../../../assets/img/aside-pic.jpg" alt="Next video">
-            </a>
-            <a  >
-                <img  class="aside__video" src="../../../assets/img/aside-pic.jpg" alt="Next video">
-            </a>
-            <a  >
-                <img  class="aside__video" src="../../../assets/img/aside-pic.jpg" alt="Next video">
-            </a>
-            <a  >
-                <img  class="aside__video" src="../../../assets/img/aside-pic.jpg" alt="Next video">
-            </a>
+            <!-- <img  class="aside__video" src="../../../assets/img/aside-pic.jpg" alt="Next video"> -->
+           <ng-container *ngFor="let list of alldata ">
+               <div (click)="play(list._id)" id="div">
+                   <img  class="aside__video" src="{{list.Thumbnail}}" alt="Next video">
+                   <h4>{{list.VideoTitle}}</h4>
+               </div>
+           </ng-container>
             <div class="aside__more">
                 <a >SHOW MORE</a>
             </div>
